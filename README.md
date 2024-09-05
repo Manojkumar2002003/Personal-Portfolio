@@ -20,19 +20,6 @@ Hello! I'm Manoj Kumar Patnaikuni, a passionate data scientist with knowledge of
 - **Tools & Technologies:** React, Flask, REST API Development
 - **Other Skills:** Data Analysis, Machine Learning, Cybersecurity
 
-## Projects
-
-### REST API with Flask and React Frontend
-
-- Developed a REST API using Flask and a frontend with React.
-- Deployed backend using Vercel.
-- Features include authentication, data visualization, and a user-friendly interface.
-
-### Decryption Algorithm
-
-- Part of the Cyber Security team at my company.
-- Working on a decryption algorithm to enhance security protocols.
-- Applied cryptographic principles and optimized performance.
 
 ### Academic Projects
 
