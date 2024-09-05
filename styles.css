@@ -1,0 +1,506 @@
+/* ==========================
+   General Styles
+   ========================== */
+   body {
+    font-family: 'Fira Code', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #2c3e50, #4b79a1, #283048, #4b6cb7, #182848);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================
+   Background Gradient Animation
+   ========================== */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==========================
+   Header Styles with Glass Effect
+   ========================== */
+header {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Header Navigation
+   ========================== */
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* ==========================
+   Sections
+   ========================== */
+section {
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px; /* Spacing below the section */
+    position: relative;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh; /* Full viewport height */
+    margin-bottom: 40px; /* Spacing below the section */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Hover Effect for Profile Picture */
+.profile-picture {
+    max-width: 270px;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.about-content {
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.about-content:hover {
+    transform: scale(1.05);
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.6;
+}
+
+/* Skills Section */
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 60vh; /* Reduced height */
+    justify-content: center;
+    margin-bottom: 40px; /* Spacing below the section */
+}
+
+#skills h2 {
+    font-family: 'Fira Code', sans-serif;
+    color: LightSkyBlue;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Increased font size for the section title */
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-icon {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.skill-item p {
+    margin: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.skill-item:hover p {
+    background: rgba(255, 255, 255, 0.2);
+    color: LightSkyBlue;
+}
+
+/* Academic Section */
+#academic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px; /* Spacing below the section */
+}
+
+#academic h2 {
+    font-family: 'Fira Code', sans-serif;
+    color: LightSkyBlue;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Slightly decreased font size for the section title */
+}
+
+.academic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between items */
+    max-width: 900px; /* Reduced max-width */
+    width: 100%;
+}
+
+.academic-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px; /* Reduced border-radius */
+    padding: 15px; /* Reduced padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academic-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.academic-item h3 {
+    font-size: 1.4rem; /* Slightly decreased font size */
+    margin-bottom: 10px;
+}
+
+.academic-item p {
+    font-size: 0.9rem; /* Slightly decreased font size */
+    line-height: 1.6;
+}
+
+/* Responsive Design for Academic Section */
+@media (max-width: 768px) {
+    .academic-container {
+        align-items: center; /* Center items on smaller screens */
+    }
+
+    .academic-item {
+        width: calc(50% - 40px); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .academic-item {
+        width: 100%; /* Single column on very small screens */
+    }
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#projects h2 {
+    font-family: 'Fira Code', sans-serif;
+    color: LightSkyBlue;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.project-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-item a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* ==========================
+   Connect & Contact Merged Section
+   ========================== */
+   #connect-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Spacing below the section */
+    position: relative;
+}
+
+#connect-contact h2 {
+    font-family: 'Fira Code', sans-serif;
+    color: LightSkyBlue;
+    margin-bottom: 20px;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Gap between icons */
+    margin-bottom: 20px; /* Space between icons and contact form */
+    padding: 0; /* Remove any default padding */
+    border: none; /* Remove any default border */
+}
+
+.social-icon {
+    display: inline-block; /* Ensure that the icon itself is treated as an inline-block */
+}
+
+.social-icon img {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+    transition: transform 0.3s ease;
+    display: inline-block;
+    border: none; /* Ensure there's no border around the images */
+    padding: 0; /* Remove any padding around the images */
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ==========================
+   Footer Styles
+   ========================== */
+footer {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ddd;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ==========================
+   Footer Styles
+   ========================== */
+footer {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ddd;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.feedback {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Ensures the element wraps around the anchor */
+}
+
+.feedback a {
+    color: inherit; /* Inherits color from .feedback */
+    text-decoration: none; /* Removes the underline */
+}
+
+.feedback:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
