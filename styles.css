@@ -521,3 +521,15 @@ footer p {
     background-color: #0056b3;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  header { width: 95%; top: 10px; }
+  header nav ul { flex-direction: column; gap: 5px; }
+  #home h1 { font-size: 2rem; }
+  #home p { font-size: 1rem; }
+  .about-container { flex-direction: column; text-align: center; }
+  .profile-picture { margin-right: 0; max-width: 200px; }
+  .about-content { text-align: center; }
+  #skills h2, #academic h2, #projects h2 { font-size: 2.2rem; }
+  .social-icons { flex-wrap: wrap; gap: 15px; }
+}
